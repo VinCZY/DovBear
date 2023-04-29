@@ -2,7 +2,7 @@ name: dov bear workflow
 on:
     push:
 jobs:
-    build_dov_bear:
+      build_dov_bear:
         runs-on: ubuntu-latest
         steps:
         - name: Checkout source
