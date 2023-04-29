@@ -57,7 +57,7 @@ jobs:
                     "type": "section",
                     "text": {
                       "type": "mrkdwn",
-                      "text": "${{ secrets.MY_RAILWAY }}"
+                      "text": "${{ secrets.MY_RAILWAY_URL }}"
                     },
                     "accessory": {
                       "type": "button",
@@ -67,7 +67,7 @@ jobs:
                         "emoji": true
                       },
                       "value": "click_me_123",
-                      "url": "${{ secrets.MY_RAILWAY }}"
+                      "url": "${{ secrets.MY_RAILWAY_URL }}"
                     }
                   }
                 ]
