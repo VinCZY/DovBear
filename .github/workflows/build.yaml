@@ -1,5 +1,4 @@
 name: dov bear workflow
-#test
 on:
     push:
 jobs:
