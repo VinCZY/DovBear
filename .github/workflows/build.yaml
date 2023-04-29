@@ -38,15 +38,15 @@ jobs:
                     "fields": [
                       {
                         "type": "mrkdwn",
-                        "text": "*Name:*\nChia Zong Yuan"
+                        "text": "*Name:* Chia Zong Yuan"
                       },
                       {
                         "type": "mrkdwn",
-                        "text": "*Email:*\nchia_z_y89@hotmail.com"
+                        "text": "*Email:* chia_z_y89@hotmail.com"
                       },
                       {
                         "type": "mrkdwn",
-                        "text": "*Metriculation:*\nA0269564M"
+                        "text": "*Metriculation:* A0269564M"
                       },
                       {
                         "type": "mrkdwn",
