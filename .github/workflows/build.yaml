@@ -15,63 +15,63 @@ jobs:
         service: "internal-gold"
 
         - name: Send custom JSON data to Slack workflow
-id: slack
-uses: slackapi/slack-github-action@v1.23.0
-with:
-    # For posting a rich message using Block Kit
-    payload: |
-          {
-            "blocks": [
-              {
-                "type": "header",
-                "text": {
-                  "type": "plain_text",
-                  "text": "DipSA 56 CI/CD Submission"
-                }
-              },
-              {
-                "type": "section",
-                "fields": [
-                  {
-                    "type": "mrkdwn",
-                    "text": "*Name:*\nChia Zong Yuan"
-                  },
-                  {
-                    "type": "mrkdwn",
-                    "text": "*Email:*\nchia_z_y89@hotmail.com"
-                  },
-                  {
-                    "type": "mrkdwn",
-                    "text": "*Metriculation:*\nA0269564M"
-                  },
-                  {
-                    "type": "mrkdwn",
-                    "text": "*Repository:*\n${{ secrets.MY_REPO }}"
-                  }
-                ]
-              },
-              {
-                "type": "section",
-                "text": {
-                  "type": "mrkdwn",
-                  "text": "${{ secrets.MY_RAILWAY}}"
-                },
-                "accessory": {
-                  "type": "button",
+        id: slack
+        uses: slackapi/slack-github-action@v1.23.0
+        with:
+              # For posting a rich message using Block Kit
+          payload: |
+            {
+              "blocks": [
+                {
+                  "type": "header",
                   "text": {
                     "type": "plain_text",
-                    "text": "Go",
-                    "emoji": true
+                    "text": "DipSA 56 CI/CD Submission"
+                  }
+                },
+                {
+                  "type": "section",
+                  "fields": [
+                    {
+                      "type": "mrkdwn",
+                      "text": "*Name:*\nChia Zong Yuan"
+                    },
+                    {
+                      "type": "mrkdwn",
+                      "text": "*Email:*\nchia_z_y89@hotmail.com"
+                    },
+                    {
+                      "type": "mrkdwn",
+                      "text": "*Metriculation:*\nA0269564M"
+                    },
+                    {
+                      "type": "mrkdwn",
+                      "text": "*Repository:*\n${{ secrets.MY_REPO }}"
+                    }
+                  ]
+                },
+                {
+                  "type": "section",
+                  "text": {
+                    "type": "mrkdwn",
+                    "text": "${{ secrets.MY_RAILWAY}}"
                   },
-                  "value": "click_me_123",
-                  "action_id": "button-action"
+                  "accessory": {
+                    "type": "button",
+                    "text": {
+                      "type": "plain_text",
+                      "text": "Go",
+                      "emoji": true
+                    },
+                    "value": "click_me_123",
+                    "action_id": "button-action"
+                  }
                 }
-              }
-            ]
-          }
+              ]
+            }
 
-  env:
-    SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-    SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
+          env:
+            SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+            SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
 
         
