@@ -1,6 +1,7 @@
 name: dov bear workflow
 on:
     push:
+        branches: [ main, 'release/v[0-99].[0-99]' ]
 jobs:
       build_dov_bear:
         if: "!startswith(github.event.head_commit.message, '#NORUN')"
@@ -67,6 +68,7 @@ jobs:
                       },
                       "value": "click_me_123",
                       "url": "${{ secrets.MY_RAILWAY_URL }}"
+                      "action_id": "button-action"
                     }
                   }
                 ]
